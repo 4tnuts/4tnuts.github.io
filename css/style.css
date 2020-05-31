@@ -1,0 +1,48 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+   position: relative;
+   background-color: #FBE8E8; 
+   height: 100vh;
+   display: grid;
+   grid-template-columns:1fr 1fr;
+}
+
+/* .header-texts{
+    background-color: blue;
+}
+
+.header-image{
+    background-color: khaki;
+} */
+
+.header-image img{
+    width: 70%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle-button{
+    position: absolute;
+    bottom: 1%;
+    left: 48%;
+    border-radius: 50%;
+    display: block;
+    border:none;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    background-color: #F67280;
+}
+
+.circle-button img{
+    width: 30px;
+}
