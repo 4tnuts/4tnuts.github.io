@@ -1,48 +1,109 @@
-html,body{
-    padding: 0;
-    margin: 0;
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #f67280;
 }
 
-.flex-center{
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.flex-hor-center {
+  justify-content: center;
+}
+
+.flex-ver-center {
+  align-items: center;
+}
+
+.flex-row{
     display: flex;
-    justify-content: center;
 }
 
-header{
-   position: relative;
-   background-color: #FBE8E8; 
-   height: 100vh;
-   display: grid;
-   grid-template-columns:1fr 1fr;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
-/* .header-texts{
-    background-color: blue;
+header {
+  position: relative;
+  background-color: #fbe8e8;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.header-image{
-    background-color: khaki;
-} */
-
-.header-image img{
-    width: 70%;
-    object-fit: cover;
-    object-position: center;
+.header-texts {
+  box-sizing: border-box;
+  padding-left: 5%;
 }
 
-.circle-button{
-    position: absolute;
-    bottom: 1%;
-    left: 48%;
-    border-radius: 50%;
-    display: block;
-    border:none;
-    box-sizing: border-box;
-    width: 50px;
-    height: 50px;
-    background-color: #F67280;
+.header-texts div {
+  width: 80%;
 }
 
-.circle-button img{
-    width: 30px;
+.header-texts div h1,
+.header-texts div h2,
+.header-texts div p {
+  margin: 0;
+}
+
+.header-texts h1 {
+  font-size: 4vw;
+  font-weight: 800;
+  margin-bottom: 30%;
+  text-shadow: 0px 3px 14px #F39798;
+}
+
+.header-texts h2 {
+  font-size: 3vw;
+  font-weight: 700;
+}
+
+.header-texts p {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.header-texts p:nth-child(3) {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.header-image img {
+  width: 70%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle-button {
+  position: absolute;
+  bottom: 2%;
+  left: 48%;
+  border-radius: 50%;
+  display: block;
+  border: none;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  background-color: #F67280;
+  transition: 0.8s;
+  box-shadow: 0px 0px 18px rgba(246, 114, 128, 0.616);
+  cursor: pointer;
+  animation: circle-button 0.9s infinite alternate;
+}
+
+.circle-button:hover{
+    background-color: #f65a69;
+}
+
+.circle-button img {
+  width: 25px;
+  vertical-align: middle;
+}
+
+@keyframes circle-button {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
