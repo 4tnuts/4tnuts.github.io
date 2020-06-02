@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/rogo.png" />
+    <link rel="icon" href="./assets/icons/rogo.png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>4TNUTS</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="header-texts flex-column">
         <h1>4tnuts</h1>
         <div>
@@ -21,9 +24,46 @@
       <div class="header-image flex-row flex-hor-center">
         <img src="./assets/amy2.png" alt="" />
       </div>
-      <button class="circle-button">
+      <a href="#main" class="circle-button">
         <img src="./assets/icons/down-arrow.svg" alt="" />
-      </button>
+      </a>
     </header>
+    <main id="main">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1919.65 147.117"
+        id="wave"
+      >
+        <path
+          data-name="Path 2"
+          d="M0,1079.927l1919.65-.216v108.4S1701.759,1170,1670.4,1190s-689.157,72.775-820.464-1.9-502.926,33.694-570.014,6.652-279.918,0-279.918,0Z"
+          transform="translate(0 -1079.711)"
+          fill=""
+        />
+      </svg>
+      <div class="my-projects">
+        <h1>My Projects</h1>
+        <div class="flex-row projects">
+          <div class="project">
+            <img src="./assets/react-chat.png" alt="" class="project-img" />
+          </div>
+          <div class="project">
+            <img src="./assets/phonebook.png" alt="" class="project-img" />
+          </div>
+          <div class="project">
+            <img src="./assets/PMS.png" alt="" class="project-img" />
+          </div>
+          <div class="project">
+            <img src="./assets/bread.png" alt="" class="project-img" />
+          </div>
+          <div class="project">
+            <img src="./assets/noskopi.png" alt="" class="project-img" />
+          </div>
+          <div class="project">
+            <img src="./assets/calculator.png" alt="" class="project-img" />
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
