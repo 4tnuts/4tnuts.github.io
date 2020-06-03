@@ -56,6 +56,7 @@ header {
   background-color: #fbe8e8;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 
 .header-texts {
@@ -135,49 +136,46 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-#wave{
+#wave {
   width: 100%;
-  fill:#fbe8e8;
+  fill: #fbe8e8;
 }
 
-.my-projects{
-  width:65%;
+.my-projects {
+  width: 65%;
   height: 100%;
   position: absolute;
   right: 0;
 }
 
-.my-projects h1{
+.my-projects h1 {
   font-size: 3.5vw;
   text-align: center;
   margin-top: 2%;
 }
 
-.projects{
+.projects {
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.project{
+.project {
   width: 20%;
   margin: 3%;
-  background-color: #FBE8E8;
+  background-color: #fbe8e8;
   box-shadow: 0px 0px 30px #fbc6c6;
 }
 
-.project img{
+.project img {
   object-fit: contain;
   object-position: center;
   width: 100%;
   display: block;
   margin: auto;
 }
-
-
-
 
 @keyframes circle-button {
   0% {
