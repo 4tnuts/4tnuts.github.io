@@ -163,8 +163,17 @@ main {
 
 .project{
   width: 20%;
-  margin: 5%;
+  margin: 3%;
   background-color: #FBE8E8;
+  box-shadow: 0px 0px 30px #fbc6c6;
+}
+
+.project img{
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  display: block;
+  margin: auto;
 }
 
 
