@@ -46,7 +46,6 @@ body {
 }
 
 header,
-main,
 article {
   height: 100vh;
   border: none;
@@ -133,10 +132,6 @@ header {
 
 main {
   width: 100%;
-  background-image: url("../assets/amy-projects.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position:bottom;
   position: relative;
 }
 
@@ -145,6 +140,12 @@ main {
   fill: #fbe8e8;
 }
 
+.my-projects{
+  background-image: url("../assets/amy-projects.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position:bottom;
+}
 
 .my-projects h1 {
   flex-basis: 100%;
@@ -180,7 +181,26 @@ main {
 .about{
   height: 100vh;
   background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
+
+footer{
+  width: 100%;
+  height: 30vh;
+  background-color: #FBE8E8;
+}
+
+footer h1 {
+  margin: 0;
+  width: 100%;
+  font-size: 2vw;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 
 
 @keyframes circle-button {
