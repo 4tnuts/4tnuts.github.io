@@ -168,6 +168,11 @@ main {
   margin: 3%;
   background-color: #fbe8e8;
   box-shadow: 0px 0px 2vw #fbc6c6;
+  transition: .8s;
+}
+
+.project:hover {
+  width: 15vw;
 }
 
 .project img {
@@ -211,6 +216,7 @@ main {
 
 .me-content{
   height: 55%;
+  font-size: 1vw;
 }
 
 .me-content div{
@@ -228,30 +234,31 @@ main {
 }
 
 .me-content a{
-  width: 90px;
-  height: 30px;
+  padding: .3em 1em;
   display: inline-block;
   background-color: #F67280;
   text-decoration: none;
   box-sizing: border-box;
   box-shadow: 1px 2px 6px #F67280;
-  margin: 0 10px 0 0;
+  margin-right: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: 0.5s;
 }
 
-.me-content a span{
-  margin-top: 5%;
-  color: #ffffff;
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-  font-size: 100%;
+.me-content a:hover{
+  background-color: #fd5667;
 }
+
+.me-content a span {
+  color : white;
+}
+
 
 .me-content p{
   font-size: 1vw;
   text-align: justify;
-  line-height: 2.3vh;
+  line-height: 23px;
   margin: 0;
 }
 
@@ -259,11 +266,40 @@ main {
   height: 10%;
 }
 
+.contact-links{
+  width: 100%;
+  height: 100%;
+}
+.contact-links div{
+  background-color: white;
+  width: min-content;
+  margin-right: .9vw;
+  padding-top: 3px;
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(249, 167, 177, 0.883);
+}
+.contact-links a img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about .image{
+  overflow: hidden;
+}
 .about .image img{
   width: 100%;
   height: 100%;
   object-position: center;
   object-fit: cover;
+  transition: 0.8s;
+}
+
+.about .image img:hover{
+  width: 130%;
 }
 
 footer{
