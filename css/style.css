@@ -79,6 +79,7 @@ header {
   font-weight: 800;
   margin-bottom: 30%;
   text-shadow: 0px 3px 14px #f39798;
+  cursor:default;
 }
 
 .header-texts h2 {
@@ -169,6 +170,7 @@ main {
   background-color: #fbe8e8;
   box-shadow: 0px 0px 2vw #fbc6c6;
   transition: .8s;
+  cursor: pointer;
 }
 
 .project:hover {
@@ -217,6 +219,12 @@ main {
 .me-content{
   height: 55%;
   font-size: 1vw;
+}
+
+.me-content h2::selection,
+.me-content p::selection{
+  background: #f5c8c8d8;
+  color:white;
 }
 
 .me-content div{
@@ -299,7 +307,7 @@ main {
 }
 
 .about .image img:hover{
-  width: 130%;
+  width: 150%;
 }
 
 footer{
