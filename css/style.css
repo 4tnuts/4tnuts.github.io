@@ -340,8 +340,9 @@ footer h1 {
 @media (min-width: 320px) and (max-width: 480px) {
   header {
     grid-template-areas:
-      "header-text"
-      "header-image";
+      "header-text header-text"
+      "header-image header-image";
+      grid-template-columns: 1fr 1fr;
     grid-template-rows: 30vh 70vh;
   }
   .header-texts h1 {
