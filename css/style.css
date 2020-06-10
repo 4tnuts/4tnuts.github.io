@@ -55,13 +55,14 @@ header {
   position: relative;
   background-color: #fbe8e8;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header-text header-image";
   overflow: hidden;
 }
 
 .header-texts {
   box-sizing: border-box;
   padding-left: 5%;
+  grid-area: header-text;
 }
 
 .header-texts div {
@@ -79,7 +80,7 @@ header {
   font-weight: 800;
   margin-bottom: 30%;
   text-shadow: 0px 3px 14px #f39798;
-  cursor:default;
+  cursor: default;
 }
 
 .header-texts h2 {
@@ -95,6 +96,10 @@ header {
 .header-texts p:nth-child(3) {
   font-size: 1.5vw;
   font-weight: 400;
+}
+
+.header-image {
+  grid-area: header-image;
 }
 
 .header-image img {
@@ -141,11 +146,11 @@ main {
   fill: #fbe8e8;
 }
 
-.my-projects{
+.my-projects {
   background-image: url("../assets/amy-projects.svg");
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position:bottom;
+  background-position: bottom;
 }
 
 .my-projects h1 {
@@ -168,8 +173,8 @@ main {
   width: 14vw;
   margin: 3%;
   background-color: #fbe8e8;
-  box-shadow: 0px 0px 2vw #fbc6c6;
-  transition: .8s;
+  box-shadow: 0px 0px 0.9vw #f8cccc;
+  transition: 0.8s;
   cursor: pointer;
 }
 
@@ -185,14 +190,17 @@ main {
   margin: auto;
 }
 
-.about{
+.about {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-areas: "about-me about-image";
 }
 
-.me-container{
+.about-me{
+  grid-area: about-me;
+}
+
+.me-container {
   width: 60%;
   height: 60%;
   margin: auto;
@@ -201,104 +209,105 @@ main {
   box-shadow: 0px 0px 2vw rgb(250, 224, 224);
 }
 .me-photo,
-.me-contact{
-  background-color: #FBE8E8;
+.me-contact {
+  background-color: #fbe8e8;
 }
 
-.me-photo{
+.me-photo {
   height: 35%;
   object-fit: center;
 }
 
-.me-photo img{
+.me-photo img {
   width: 40%;
   object-position: bottom;
   object-fit: contain;
 }
 
-.me-content{
+.me-content {
   height: 55%;
   font-size: 1vw;
 }
 
 .me-content h2::selection,
-.me-content p::selection{
+.me-content p::selection {
   background: #f5c8c8d8;
-  color:white;
+  color: white;
 }
 
-.me-content div{
+.me-content div {
   width: 80%;
   height: 80%;
 }
 
-.me-content h2{
+.me-content h2 {
   font-size: 1.8vw;
-  margin:0;
+  margin: 0;
 }
-.me-content h2:nth-child(3){
+.me-content h2:nth-child(3) {
   font-size: 1.6vw;
   margin: 2vh 0 1vh 0;
 }
 
-.me-content a{
-  padding: .3em 1em;
+.me-content a {
+  padding: 0.3em 1em;
   display: inline-block;
-  background-color: #F67280;
+  background-color: #f67280;
   text-decoration: none;
   box-sizing: border-box;
-  box-shadow: 1px 2px 6px #F67280;
+  box-shadow: 1px 2px 6px #f67280;
   margin-right: 15px;
   font-size: 0.8em;
   font-weight: 600;
   transition: 0.5s;
 }
 
-.me-content a:hover{
+.me-content a:hover {
   background-color: #fd5667;
 }
 
 .me-content a span {
-  color : white;
+  color: white;
 }
 
-
-.me-content p{
+.me-content p {
   font-size: 1vw;
   text-align: justify;
   line-height: 23px;
   margin: 0;
 }
 
-.me-contact{
+.me-contact {
   height: 10%;
 }
 
-.contact-links{
+.contact-links {
   width: 100%;
   height: 100%;
 }
-.contact-links div{
+.contact-links div {
   background-color: white;
   width: min-content;
-  margin-right: .9vw;
+  margin-right: 0.9vw;
   padding-top: 3px;
   width: 40px;
   height: 35px;
   border-radius: 50%;
   box-shadow: 0px 3px 6px rgba(249, 167, 177, 0.883);
 }
-.contact-links a img{
+.contact-links a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.about .image{
+.about .image {
   overflow: hidden;
+  box-sizing: border-box;
+  grid-area: about-image;
 }
-.about .image img{
+.about .image img {
   width: 100%;
   height: 100%;
   object-position: center;
@@ -306,14 +315,14 @@ main {
   transition: 0.8s;
 }
 
-.about .image img:hover{
+.about .image img:hover {
   width: 150%;
 }
 
-footer{
+footer {
   width: 100%;
   height: 30vh;
-  background-color: #FBE8E8;
+  background-color: #fbe8e8;
 }
 
 footer h1 {
@@ -325,7 +334,18 @@ footer h1 {
   vertical-align: middle;
 }
 
-
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    grid-template-areas:
+      "header-text"
+      "header-image";
+  }
+  .about{
+    grid-template-areas: 
+    "about-me"
+    "about-image";
+  }
+}
 
 @keyframes circle-button {
   0% {
