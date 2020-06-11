@@ -191,7 +191,10 @@ main {
   cursor: pointer;
   padding: 15px;
   box-sizing: border-box;
+}
 
+.project div{
+  position: relative;
 }
 
 .project img {
@@ -199,6 +202,28 @@ main {
   object-position: center;
   width: 100%;
   height: 100%;
+}
+
+.project .project-overlay{
+  position: absolute;
+  opacity: 0;
+  background-color: #f8c6c6c9;
+  width: 100%;
+  height: 100%;
+  transition: 0.8s;
+}
+
+.project .project-overlay:hover{
+  opacity: 1;
+}
+
+.project a{
+  color:white;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: .9vw;
+  word-wrap: break-word;
+  text-align: center;
 }
 
 .about {
@@ -400,6 +425,11 @@ footer h1 {
       "about-image";
   }
 
+  .about .image img:hover{
+    width: 100%;
+    height: 115%;
+  }
+
   .me-container{
     width: 80%;
     height: 80%;
@@ -431,6 +461,7 @@ footer h1 {
     padding-top: 6%;
     padding-left: 6%;
   }
+
 
   footer{
     height: 12vh;
