@@ -155,33 +155,39 @@ main {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom;
-  overflow: hidden;
-  height: auto;
-  min-height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-x:hidden;
+  height: 100vh;
   width: 100%;
   align-items: flex-end;
 }
 
+.my-projects::-webkit-scrollbar { /* WebKit */
+  width: 0px;
+}
+
+
 .my-projects h1 {
-  flex-basis: 100%;
-  font-size: 3.2vw;
+  font-size: 3rem;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   display: inline-block;
-}
-
-.title{
-  grid-column: 1/ span 3;
+  width: 100%;
 }
 
 .projects {
+  width: 55%;
+  height: 50%;
+}
+
+.projects-container{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 30%));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap:2rem;
-  row-gap: 3rem;
-  padding: 0px 50px 50px 50px;
-  width: 50%;
+  margin: 3%;
 }
 
 .project {
@@ -189,19 +195,19 @@ main {
   box-shadow: 0px 0px 10px #f8c6c6;
   transition: 0.8s;
   cursor: pointer;
-  padding: 15px;
+  padding: 5%;
   box-sizing: border-box;
 }
 
 .project div{
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .project img {
-  object-fit: cover;
-  object-position: center;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project .project-overlay{
@@ -364,7 +370,7 @@ footer h1 {
   vertical-align: middle;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px){
   header {
     grid-template-areas:
       "header-text header-text"
@@ -398,6 +404,7 @@ footer h1 {
   .my-projects{
     align-items: center;
     background:none;
+    height:auto;
   }
 
   .projects{
@@ -430,6 +437,11 @@ footer h1 {
     height: 115%;
   }
 
+
+  .project .project-overlay a {
+    font-size: 5vw;
+  }
+
   .me-container{
     width: 80%;
     height: 80%;
@@ -440,7 +452,7 @@ footer h1 {
   }
 
   .me-content a{
-    font-size: 2.5vw;
+    font-size: 3.3vw;
   }
   
   .me-content h2:nth-child(3) {
