@@ -170,7 +170,7 @@ main {
 
 
 .my-projects h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -179,7 +179,7 @@ main {
 }
 
 .projects {
-  width: 55%;
+  width: 63%;
   height: 50%;
 }
 
