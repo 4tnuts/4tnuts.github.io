@@ -1,13 +1,43 @@
 * {
-  font-family: "Montserrat", sans-serif;
   color: #f67280;
-}
+  font-family: "Montserrat", sans-serif;
+  }
 
 *::selection {
   background: white;
   background: #f5c8c8d8;
   color: white;
 }
+
+.dark{
+  --bg-color :  #2F0909;
+  --bg-color2 : rgb(48, 45, 45);
+  --button-color : #6C0712;
+  --button-hover : #a52f3c;
+  --circle-hover:#7a0816;
+  --circle-shadow : #700d19;
+  --contact-color : #2F0909;
+  --box-shadow-project : #360c0c;
+  --box-shadow-about : rgba(47, 9, 9, 0.74);
+  --project-overlay:#2f0909bb;
+  --track-bg : #3C0B0B;
+  --fourtnuts-shadow : #8d1d1d;
+  }
+  
+  .light{
+    --bg-color :  #fbe8e8;
+    --bg-color2 : #ffffff;
+    --button-color : #f67280;
+    --button-hover : #fd5667;
+    --circle-hover:#f65a69;
+    --circle-shadow : rgba(246, 114, 128, 0.616);
+    --contact-color : #ffffff;
+    --box-shadow-project: #f8c6c6;
+    --box-shadow-about: rgb(250, 224, 224);
+    --project-overlay: #f8c6c6c9;
+    --track-bg : #f5c8c8;
+    --fourtnuts-shadow : #f39798;
+  }
 
 html,
 body {
@@ -21,12 +51,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f5c8c8;
+  background-color: var(--track-bg);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #f67280;
+  background-color: var(--button-color);
   width: 1px;
 }
 
@@ -55,7 +85,7 @@ article {
 
 header {
   position: relative;
-  background-color: #fbe8e8;
+  background-color: var(--bg-color);
   display: grid;
   grid-template-areas: "header-text header-image";
   grid-template-columns: 50vw 50vw;
@@ -82,7 +112,7 @@ header {
   font-size: 4vw;
   font-weight: 800;
   margin-bottom: 30%;
-  text-shadow: 0px 3px 14px #f39798;
+  text-shadow: 0px 3px 14px var(--fourtnuts-shadow);
   cursor: default;
 }
 
@@ -113,6 +143,27 @@ header {
   object-position: center;
 }
 
+.theme-button{
+  border-radius: 50%;
+  display: block;
+  border: none;
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  transition: 0.8s;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-top: 5%;
+  margin-right: 2%;
+}
+
+.theme-button:nth-child(1){
+  background-color: #fd5667;
+}
+.theme-button:nth-child(2){
+  background-color: #791616;
+}
+
 .circle-button {
   position: absolute;
   bottom: 2%;
@@ -123,9 +174,9 @@ header {
   box-sizing: border-box;
   width: 50px;
   height: 50px;
-  background-color: #f67280;
+  background-color: var(--button-color);
   transition: 0.8s;
-  box-shadow: 0px 0px 18px rgba(246, 114, 128, 0.616);
+  box-shadow: 0px 0px 18px var(--circle-shadow);
   cursor: pointer;
   animation: circle-button 0.9s infinite alternate;
   text-decoration: none;
@@ -134,7 +185,7 @@ header {
 }
 
 .circle-button:hover {
-  background-color: #f65a69;
+  background-color: var(--circle-hover);
 }
 
 .circle-button img {
@@ -147,7 +198,7 @@ main {
 }
 
 #wave {
-  fill: #fbe8e8;
+  fill: var(--bg-color);
 }
 
 .my-projects {
@@ -162,6 +213,7 @@ main {
   height: 100vh;
   width: 100%;
   align-items: flex-end;
+  background-color: var(--bg-color2);
 }
 
 .my-projects::-webkit-scrollbar { /* WebKit */
@@ -191,8 +243,8 @@ main {
 }
 
 .project {
-  background-color: #fbe8e8;
-  box-shadow: 0px 0px 10px #f8c6c6;
+  background-color: var(--bg-color);
+  box-shadow: 0px 0px 10px var(--box-shadow-project);
   transition: 0.8s;
   cursor: pointer;
   padding: 5%;
@@ -213,7 +265,7 @@ main {
 .project .project-overlay{
   position: absolute;
   opacity: 0;
-  background-color: #f8c6c6c9;
+  background-color: var(--project-overlay);
   width: 100%;
   height: 100%;
   transition: 0.8s;
@@ -224,7 +276,7 @@ main {
 }
 
 .project a{
-  color:white;
+  color:#ffffff;
   font-weight: 800;
   text-decoration: none;
   font-size: .9vw;
@@ -236,6 +288,7 @@ main {
   height: 100vh;
   display: grid;
   grid-template-areas: "about-me about-image";
+  background-color: var(--bg-color2);
 }
 
 .about-me {
@@ -248,11 +301,11 @@ main {
   margin: auto;
   border-radius: 5%;
   overflow: hidden;
-  box-shadow: 0px 0px 2vw rgb(250, 224, 224);
+  box-shadow: 0px 0px 2vw var(--box-shadow-about);
 }
 .me-photo,
 .me-contact {
-  background-color: #fbe8e8;
+  background-color: var(--bg-color);
 }
 
 .me-photo {
@@ -288,10 +341,10 @@ main {
 .me-content a {
   padding: 0.3em 1em;
   display: inline-block;
-  background-color: #f67280;
+  background-color: var(--button-color);
   text-decoration: none;
   box-sizing: border-box;
-  box-shadow: 1px 2px 6px #f67280;
+  box-shadow: 1px 2px 6px var(--button-color);;
   margin-right: 15px;
   font-size: 0.8em;
   font-weight: 600;
@@ -299,11 +352,11 @@ main {
 }
 
 .me-content a:hover {
-  background-color: #fd5667;
+  background-color: var(--button-hover);
 }
 
 .me-content a span {
-  color: white;
+  color: #ffffff;
 }
 
 .me-content p {
@@ -322,7 +375,7 @@ main {
   height: 100%;
 }
 .contact-links div {
-  background-color: white;
+  background-color: var(--contact-color);
   width: min-content;
   margin-right: 0.9vw;
   padding-top: 3px;
@@ -358,7 +411,7 @@ main {
 footer {
   width: 100%;
   height: 20vh;
-  background-color: #fbe8e8;
+  background-color: var(--bg-color);
 }
 
 footer h1 {
