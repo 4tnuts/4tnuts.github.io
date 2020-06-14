@@ -429,7 +429,7 @@ footer h1 {
       "header-text header-text"
       "header-image header-image";
       grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30vh 70vh;
+    grid-template-rows: 40vh 60vh;
   }
   .header-texts h1 {
     font-size: 10vw;
@@ -457,6 +457,7 @@ footer h1 {
   .my-projects{
     align-items: center;
     background:none;
+    background-color: var(--bg-color2);
     height:auto;
   }
 
