@@ -60,6 +60,15 @@ body {
   width: 1px;
 }
 
+.alert-box{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: azure;
+  z-index: 10;
+  opacity: 0;
+}
+
 .flex-hor-center {
   justify-content: center;
 }
