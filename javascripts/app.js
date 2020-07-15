@@ -51,4 +51,3 @@ window.onscroll = function fadeIn() {
         }
     });
 }
-
