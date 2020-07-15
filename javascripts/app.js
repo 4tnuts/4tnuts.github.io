@@ -36,7 +36,7 @@ window.onscroll = function fadeIn() {
         let bottomPart = sectionSize.bottom;
         let topPart = sectionSize.top;
         console.log(`ini bottom part ${bottomPart} & ini window scroll y ${window.scrollY} & ini top part ${topPart}`)
-        if (window.scrollY >= bottomPart) {
+        if (sectionSize.top < 200) {
             section.style.opacity = "1";
             section.style.transform = "translateX(0)";
             section.style.transition = "1s ease-in-out";
